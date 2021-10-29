@@ -1,41 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import * as ReactBootStrap from "react-bootstrap";
+import Students from './components/Students';
+import Navbar from './components/Navbar';
+import Adminlogin from './components/Adminlogin';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-/*Colour Scheme:
-#008B74
-#00C2A8
-#4FFBDF
-#845EC2
-*/
-
-/*Screens
-
-  SplashScreen
-  AdminPage
-    - Student Access
-    - Resource Page
-  StudentsPage
-    -StudentPage1
-    -StudentPage2
-
-*/
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello from the other side
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      {/*If you want to add any more pages, add the js file in the components directory and link them to the router as such, must also
+        be added to the navbar in ./components/navbar.js */}
+
+        <Router>
+          <Navbar/>
+          {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
+          <Switch>
+            <Route path="/students" component={Students}>
+              <Students/>
+            </Route>
+            <Route path="/Adminlogin" component={Adminlogin}>
+              <Adminlogin/>
+            </Route>
+          </Switch>
+    </Router>
+
     </div>
   );
 }
