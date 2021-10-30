@@ -1,22 +1,15 @@
 import React from 'react';
 import "../App.css";
-import Card from "./card"
+import Card from "./card";
 
 function App() {
 
-    return (
+    return(
       <div className="App">
-          
-            <h1 className="pageHeaders">Students</h1>
-            <div className = "cards">
-              <Card/>
-            </div>
-
+        <h1>Students</h1>
+          <Card/>
       </div>
-    );
+    )
   }
-
-
-  
   export default App;
   
