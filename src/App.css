@@ -43,3 +43,17 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+.pageHeaders {
+    position: absolute;
+    left: 45%;
+    top: 6%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 5px;
+  padding-top: 6%;
+  padding-left: 1%;
+}
