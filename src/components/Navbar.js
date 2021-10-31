@@ -10,7 +10,7 @@ function App() {
     <div className="App">
         <ReactBootStrap.Navbar variant="dark" bg="dark" expand="lg" className="navbarFull">
           <ReactBootStrap.Container>
-            <ReactBootStrap.Navbar.Brand href="#home" className="d-inline-block align-top">Techlix</ReactBootStrap.Navbar.Brand>
+            <ReactBootStrap.Navbar.Brand href="#home" className="d-inline-block align-top">Code with Care</ReactBootStrap.Navbar.Brand>
             <ReactBootStrap.Navbar.Toggle aria-controls="basic-navbar-nav" />
             <ReactBootStrap.Navbar.Collapse id="basic-navbar-nav">
               <ReactBootStrap.Nav className="container-fluid">
