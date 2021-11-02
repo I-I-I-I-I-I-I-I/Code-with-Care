@@ -1,32 +1,46 @@
-import React from 'react';
-import "../App.css";
-import * as ReactBootStrap from 'react-bootstrap';
+import React ,{ Component, useState} from 'react';
+import "../login.css";
+import AdminPage from './AdminPage';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {
-    return (
-      <div className="App">
-          
-                    <ReactBootStrap.Form className="former">
-            <ReactBootStrap.Form.Group className="mb-3" controlId="formBasicEmail">
-            <ReactBootStrap.Form.Label>Email address</ReactBootStrap.Form.Label>
-            <ReactBootStrap.Form.Control type="email" placeholder="Enter email" />
-            <ReactBootStrap.Form.Text className="text-muted">
-                Use your faculty email address
-            </ReactBootStrap.Form.Text>
-            </ReactBootStrap.Form.Group>
+const move = () =>
+  {
+    <Router>
+      <Switch>
+      <Route path="/AdminPage" component={AdminPage}>
+        <AdminPage/>
+      </Route>
+      </Switch>
+  </Router>
 
-            <ReactBootStrap.Form.Group className="mb-3" controlId="formBasicPassword">
-            <ReactBootStrap.Form.Label>Password</ReactBootStrap.Form.Label>
-            <ReactBootStrap.Form.Control type="password" placeholder="Password" />
-            </ReactBootStrap.Form.Group>
-            <ReactBootStrap.Button variant="primary" type="submit">
-            Log-in
-            </ReactBootStrap.Button>
-            </ReactBootStrap.Form>
-
-      </div>
-    );
+  console.log("I'm here")
   }
-  
-  export default App;
-  
+//Still working on validation for this, submit takes you to the right page for now
+function Adminlogin()
+  {
+    return(
+      <div class="login-box">
+      <h2>Login</h2>
+      <form>
+        <div class="user-box">
+          <input type="text" name="" required=""/>
+          <label>Username</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="" required=""/>
+          <label>Password</label>
+        </div>
+       <div onClick={move}>
+          <h2>Submit</h2>
+      </div>
+      </form>
+    </div>
+    )
+  }
+
+export default Adminlogin;
