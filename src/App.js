@@ -1,8 +1,9 @@
 import './App.css';
-import * as ReactBootStrap from "react-bootstrap";
 import Students from './components/Students';
 import Navbar from './components/Navbar';
 import Adminlogin from './components/Adminlogin';
+import AdminPage from './components/AdminPage';
+import StudentPage from './components/StudentPage';
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,6 +28,12 @@ function App() {
             </Route>
             <Route path="/Adminlogin" component={Adminlogin}>
               <Adminlogin/>
+            </Route>
+            <Route path="/AdminPage" component={AdminPage}>
+              <AdminPage/>
+            </Route>
+            <Route path="/studentPage" component={StudentPage}>
+              <StudentPage/>
             </Route>
           </Switch>
     </Router>

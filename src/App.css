@@ -56,4 +56,16 @@
   grid-gap: 5px;
   padding-top: 6%;
   padding-left: 1%;
+  background: none;
+}
+
+.dangerButton {
+  position : absolute;
+  left : 92%;
+  bottom: 15%;
+}
+
+.navbarFull {
+  position : sticky;
+  top : 0;
 }

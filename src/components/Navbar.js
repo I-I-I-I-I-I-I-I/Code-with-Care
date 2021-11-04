@@ -17,11 +17,21 @@ function App() {
                   <Link to="/students">
                 <ReactBootStrap.Nav.Link href="#students">Students</ReactBootStrap.Nav.Link>
                 </Link>
-                <Link to = "/Adminlogin">
-                <ReactBootStrap.Nav.Link href="#adminLogin" className="ms-auto">Admin Login</ReactBootStrap.Nav.Link>
+
+                {/* TEMPORARY LINKS */}
+                <Link to="/AdminPage">
+                <ReactBootStrap.Nav.Link href="#AdminPage">MAIN ADMIN DEV ACCESS</ReactBootStrap.Nav.Link>
                 </Link>
+                <Link to="/studentPage">
+                <ReactBootStrap.Nav.Link href="#studentPage">MAIN STUDENT DEV ACCESS</ReactBootStrap.Nav.Link>
+                </Link>
+
+
               </ReactBootStrap.Nav>
             </ReactBootStrap.Navbar.Collapse>
+            <Link to = "/adminLogin">
+            <ReactBootStrap.Button variant="danger" className="dangerButton">Admin Login</ReactBootStrap.Button>
+            </Link>
           </ReactBootStrap.Container>
         </ReactBootStrap.Navbar>
     </div>
