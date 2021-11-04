@@ -3,13 +3,13 @@ import "../App.css";
 
 function AdminPage() {
     return (
-      <div className="App">
-          
+        <div className="App">
+
             <h1>Admin Page</h1>
 
-      </div>
+        </div>
     );
-  }
-  
-  export default AdminPage;
+}
+
+export default AdminPage;
   

@@ -1,23 +1,52 @@
 [
-    {
-        "name" : "Arnold Dickinson",
-        "desc" : "",
-        "image" : ""
-},
-
-    {
-        "name" : "Daniel",
-        "desc" : "",
-        "image" : ""
-    },
-
-    {"name" : "Patrick" , "desc" : "" , "image" : ""},
-    {"name" : "Betty" , "desc" : "" , "image" : ""},
-    {"name" : "Carson" , "desc" : "" , "image" : ""},
-    {"name" : "Ringo" , "desc" : "" , "image" : ""},
-    {"name" : "Bingo" , "desc" : "" , "image" : ""},
-    {"name" : "Headphones" , "desc" : "" , "image" : ""},
-    {"name" : "Jessie" , "desc" : "" , "image" : ""},
-    {"name" : "Ringo" , "desc" : "" , "image" : ""}
-
+  {
+    "name": "Arnold Dickinson",
+    "desc": "",
+    "image": ""
+  },
+  {
+    "name": "Daniel",
+    "desc": "",
+    "image": ""
+  },
+  {
+    "name": "Patrick",
+    "desc": "",
+    "image": ""
+  },
+  {
+    "name": "Betty",
+    "desc": "",
+    "image": ""
+  },
+  {
+    "name": "Carson",
+    "desc": "",
+    "image": ""
+  },
+  {
+    "name": "Ringo",
+    "desc": "",
+    "image": ""
+  },
+  {
+    "name": "Bingo",
+    "desc": "",
+    "image": ""
+  },
+  {
+    "name": "Headphones",
+    "desc": "",
+    "image": ""
+  },
+  {
+    "name": "Jessie",
+    "desc": "",
+    "image": ""
+  },
+  {
+    "name": "Ringo",
+    "desc": "",
+    "image": ""
+  }
 ]
