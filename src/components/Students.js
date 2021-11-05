@@ -4,12 +4,13 @@ import Card from "./card";
 
 function App() {
 
-    return(
-      <div className="App">
-        <h1>Students</h1>
-          <Card/>
-      </div>
+    return (
+        <div className="App">
+            <h1>Wanda's Class</h1>
+            <Card/>
+        </div>
     )
-  }
-  export default App;
+}
+
+export default App;
   
