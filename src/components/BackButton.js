@@ -10,8 +10,7 @@ export const BackButton = () => {
     return (
         <>
             <Button className="aButton" variant="warning" size="lg" onClick={() => history.goBack()}>
-                <FaArrowLeft/>
-                Back
+                <FaArrowLeft/> Back
             </Button>
         </>
     );
