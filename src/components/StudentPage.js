@@ -1,31 +1,23 @@
 import React from 'react'
 import {BackButton} from "./BackButton";
 import ReactPlayer from "react-player";
-import {FaVolumeUp} from "react-icons/all";
-import {Button, Card, Col, Container, Image, Row} from "react-bootstrap";
+import {Card, Col, Container, Image, Row} from "react-bootstrap";
 import Picture from "../images/1200px-Circuit_elements.svg.png";
-
-const speak = (message) => {
-    const speech = new SpeechSynthesisUtterance(message);
-    [speech.voice] = speechSynthesis.getVoices();
-    speechSynthesis.speak(speech);
-};
-
-const speakAllElements = () => {
-    let elements = document.getElementsByClassName("text");
-    let fullText = '';
-    for (let i = 0; i < elements.length; i++) {
-        fullText += elements[i].innerText + '\n';
-    }
-    speak(fullText);
-};
+import TextToSpeech from "./TextToSpeech";
 
 function studentPage() {
     return (
         <div className="App">
-            <div style={{display: "flex"}}>
-                <BackButton/>
-            </div>
+            <Container>
+                <Row>
+                    <Col xs style={{display: 'flex', justifyContent: 'flex-start'}}>
+                        <BackButton/>
+                    </Col>
+                    <Col xs style={{display: 'flex', justifyContent: 'flex-end'}}>
+                        <TextToSpeech/>
+                    </Col>
+                </Row>
+            </Container>
             <Container>
                 <Row>
                     <h1>Basic Electronics</h1>
@@ -44,18 +36,12 @@ function studentPage() {
                                 <Card.Title>
                                     Lorem ipsum dolor.
                                 </Card.Title>
-                                <Card.Text class="text">
+                                <Card.Text class="speak">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cumque debitis
                                     dolore
                                     eos esse fugiat harum, impedit, in ipsum modi officiis rem rerum sapiente sed
                                     soluta!
                                 </Card.Text>
-                                <Card.Footer>
-                                    <Button variant="warning" onClick={() => speakAllElements()}
-                                            aria-label="Click this button to speak the text.">
-                                        <FaVolumeUp/> Speak text!
-                                    </Button>
-                                </Card.Footer>
                             </Card.Body>
                         </Card>
                     </Col>
