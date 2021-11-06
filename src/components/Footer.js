@@ -3,7 +3,7 @@ import {Container, Navbar, NavbarBrand} from "react-bootstrap";
 
 function Footer() {
     return (
-        <Navbar fixed="bottom" bg="primary" variant="dark" expand="lg">
+        <Navbar bg="primary" variant="dark" expand="lg">
             <Container>
                 <NavbarBrand className="m-auto">Made with ❤ by 2814919 and 2711337</NavbarBrand>
             </Container>

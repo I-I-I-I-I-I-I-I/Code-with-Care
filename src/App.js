@@ -36,8 +36,8 @@ function App() {
                         <StudentPage/>
                     </Route>
                 </Switch>
-                <Footer/>
             </Router>
+            <Footer/>
         </div>
     );
 }
