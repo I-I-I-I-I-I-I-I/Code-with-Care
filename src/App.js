@@ -6,6 +6,7 @@ import AdminPage from './components/AdminPage';
 import StudentPage from './components/StudentPage';
 import {Helmet} from "react-helmet"
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
     return (
@@ -36,7 +37,7 @@ function App() {
                     </Route>
                 </Switch>
             </Router>
-
+            <Footer/>
         </div>
     );
 }

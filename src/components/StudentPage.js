@@ -3,13 +3,21 @@ import {BackButton} from "./BackButton";
 import ReactPlayer from "react-player";
 import {Card, Col, Container, Image, Row} from "react-bootstrap";
 import Picture from "../images/1200px-Circuit_elements.svg.png";
+import TextToSpeech from "./TextToSpeech";
 
 function studentPage() {
     return (
         <div className="App">
-            <div style={{display: "flex"}}>
-                <BackButton/>
-            </div>
+            <Container>
+                <Row>
+                    <Col xs style={{display: 'flex', justifyContent: 'flex-start'}}>
+                        <BackButton/>
+                    </Col>
+                    <Col xs style={{display: 'flex', justifyContent: 'flex-end'}}>
+                        <TextToSpeech/>
+                    </Col>
+                </Row>
+            </Container>
             <Container>
                 <Row>
                     <h1>Basic Electronics</h1>
@@ -25,16 +33,14 @@ function studentPage() {
                     <Col md>
                         <Card className="my-1" bg="primary" text="white">
                             <Card.Body>
-                                <Card.Title>Lorem ipsum dolor.</Card.Title>
-                                <Card.Text>
+                                <Card.Title>
+                                    Lorem ipsum dolor.
+                                </Card.Title>
+                                <Card.Text class="speak">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cumque debitis
                                     dolore
                                     eos esse fugiat harum, impedit, in ipsum modi officiis rem rerum sapiente sed
                                     soluta!
-                                    Aut
-                                    dolorem dolorum earum expedita harum, laborum minima modi odio qui ullam? Ea ipsum
-                                    porro
-                                    vel.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
