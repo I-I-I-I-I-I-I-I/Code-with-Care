@@ -4,7 +4,7 @@ import ReactPlayer from "react-player";
 import {Card, Col, Container, Image, Row} from "react-bootstrap";
 import Picture from "../images/1200px-Circuit_elements.svg.png";
 import '../App.css';
-import RouteIf from './RouteIf';
+import RouteStudent from './RouteStudent';
 
 function studentPage() {
 
@@ -13,7 +13,7 @@ function studentPage() {
     return (
         
         <div className="App" style = {{position : "relative" , top : "50px"}}>
-            <RouteIf/>
+
             <div style={{display: "flex" , backgroundColor : "#ffffff"}}>
                 <BackButton/>
             </div>

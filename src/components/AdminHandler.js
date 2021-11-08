@@ -4,7 +4,7 @@ import '../login.css'
 import { createContext } from 'react';
 
 
-const Context = createContext("w");
+const Context = createContext("w'");
 
 
 export function AdminLogin() {
