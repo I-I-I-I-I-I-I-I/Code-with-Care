@@ -26,7 +26,7 @@ const card = () => {
 
         return (
 
-            <Card style={{width: '18rem'}}>
+            <Card style={{width: '18rem' , margincolor : '#0d6efd' , border : "5px solid" , marginBottom : "3rem"}} border="warning">
                 <Link to="/studentPage" style={{color: 'inherit', textDecoration: 'inherit'}}>
                     <Images names = {card.image}/>
                     <Card.Body>
@@ -34,7 +34,7 @@ const card = () => {
                         <Card.Text>
                             {card.desc}
                         </Card.Text>
-                        <Button variant="primary" href="/studentPage">Log-in</Button>
+                        <Button variant="warning" href="/studentPage">Log-in</Button>
                     </Card.Body>
                 </Link>
             </Card>

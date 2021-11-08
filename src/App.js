@@ -7,9 +7,11 @@ import StudentPage from './components/StudentPage';
 import AdminHandler from './components/AdminHandler';
 import {Helmet} from "react-helmet"
 import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
+import Footer from './components/Footer';
 function App() {
     return (
         <div className="App">
+            <div style = {{paddingBottom : "5rem"}}>
             <Helmet>
                 <title>Code with Care</title>
             </Helmet>
@@ -43,6 +45,10 @@ function App() {
                     </Route>
                 </Switch>
             </Router>
+            </div>
+
+            <Footer/>
+
         </div>
     );
 }

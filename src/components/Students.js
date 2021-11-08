@@ -6,8 +6,8 @@ import Images from "./Images"
 function App() {
 
     return (
-        <div className="App" style = {{ position : "relative" ,top : "80px"}}>
-            <h1>Wanda's Class</h1>
+        <div className="App" style = {{ position : "relative" ,top : "4rem" , backgroundColor : "white"}}>
+            <h1 style={{textDecoration : "underline"}}>Wanda's Class</h1>
             <Card/>
         </div>
     )
