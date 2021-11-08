@@ -1,40 +1,43 @@
 import '../App.css';
-import * as ReactBootStrap from "react-bootstrap";
+import {Nav , Navbar , Container , Button} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import logo from '../images/default.png'
 
 function App() {
     return (
-        <div className="App">
-            <ReactBootStrap.Navbar variant="dark" bg="dark" expand="lg" className="navbarFull">
-                <ReactBootStrap.Container>
-                    <ReactBootStrap.Navbar.Brand href="#home" className="d-inline-block align-top">Code with
-                        Care</ReactBootStrap.Navbar.Brand>
-                    <ReactBootStrap.Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                    <ReactBootStrap.Navbar.Collapse id="basic-navbar-nav">
-                        <ReactBootStrap.Nav className="container-fluid">
+        <div className="Nav">
+            <Navbar variant="dark" bg="dark" expand="lg" className="navbarFull">
+                <Container>
+                    <Navbar.Brand href="/students" className="logo-right"><img style = {{height : "300px"}}src = {logo}></img></Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="container-fluid">
                             <Link to="/students">
-                                <ReactBootStrap.Nav.Link href="#students">Students</ReactBootStrap.Nav.Link>
+                                <Nav.Link href="#students">Students</Nav.Link>
                             </Link>
 
                             {/* TEMPORARY LINKS */}
                             <Link to="/AdminPage">
-                                <ReactBootStrap.Nav.Link href="#AdminPage">MAIN ADMIN DEV
-                                    ACCESS</ReactBootStrap.Nav.Link>
+                                <Nav.Link href="#AdminPage">MAIN ADMIN DEV
+                                    ACCESS</Nav.Link>
                             </Link>
                             <Link to="/studentPage">
-                                <ReactBootStrap.Nav.Link href="#studentPage">MAIN STUDENT DEV
-                                    ACCESS</ReactBootStrap.Nav.Link>
+                                <Nav.Link href="#studentPage">MAIN STUDENT DEV
+                                    ACCESS</Nav.Link>
+                            </Link>
+                            <Link to="/AdminHandler">
+                                <Nav.Link href="#AdminHandler">Admin handler</Nav.Link>
                             </Link>
 
 
-                        </ReactBootStrap.Nav>
-                    </ReactBootStrap.Navbar.Collapse>
+                        </Nav>
+                    </Navbar.Collapse>
                     <Link to="/adminLogin">
-                        <ReactBootStrap.Button variant="danger" className="dangerButton">Admin
-                            Login</ReactBootStrap.Button>
+                        <Button variant="danger" className="dangerButton">Admin
+                            Login</Button>
                     </Link>
-                </ReactBootStrap.Container>
-            </ReactBootStrap.Navbar>
+                </Container>
+            </Navbar>
         </div>
     );
 }

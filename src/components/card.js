@@ -4,19 +4,31 @@ import {Button, Card} from "react-bootstrap";
 import blank_profile from "../images/blank_profile.png"
 import PostData from '../data/studentData.json'
 import {Link} from "react-router-dom";
+import Images from './Images'
+
+function imageHandler(card) {
+
+    if (card.image === "") {
+        card.image = blank_profile;
+        return card;
+    }
+    else {
+
+        card.image = <Images names = {card.image}/>
+
+    }
+
+}
 
 const card = () => {
 
     const creator = (card) => {
 
-        if (card.image === "") {
-            card.image = blank_profile;
-        }
-
         return (
+
             <Card style={{width: '18rem'}}>
                 <Link to="/studentPage" style={{color: 'inherit', textDecoration: 'inherit'}}>
-                    <Card.Img variant="top" src={card.image}/>
+                    <Images names = {card.image}/>
                     <Card.Body>
                         <Card.Title>{card.name}</Card.Title>
                         <Card.Text>
