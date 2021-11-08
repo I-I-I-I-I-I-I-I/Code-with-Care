@@ -7,14 +7,16 @@ import {BsPersonCircle , HiLockClosed} from "react-icons/all";
 function App() {
     return (
         <div className="Nav">
-            <Navbar variant="dark" bg="dark" expand="lg" className="navbarFull">
+            <Navbar variant="dark" bg="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand href="/students" className="logo-right"><img style = {{height : "300px"}}src = {logo}></img></Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                    <Link to = "/students">
+                    <Navbar.Brand className = "d-inline-block align-top"><img style = {{height : "2.5rem"}}src = {logo}></img></Navbar.Brand>
+                    </Link>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="container-fluid">
+
                             <Link to="/students">
-                                <Button href="#students" style={{}}><BsPersonCircle style={{marginBottom : "0.2rem"}}/> Students</Button>
+                                <Button href="#students"><BsPersonCircle style={{marginBottom : "0.2rem"}}/> Students</Button>
 
                             </Link>
 

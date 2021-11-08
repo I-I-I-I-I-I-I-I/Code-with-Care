@@ -6,15 +6,7 @@ function RouteStudent({names}) {
   return(
 
       <div>
-<Router>
-    <Switch>
-    
-    <Route path = {"/" + names} component=""/>
 
-
-    <Route exact path="/">
-        <Redirect to = "/Arnold"/>
-    </Route>
     <Route path="/students">
         
     </Route>
@@ -30,8 +22,7 @@ function RouteStudent({names}) {
     <Route path="/AdminHandler">
         
     </Route>
-</Switch>
-</Router>
+
 </div>
   );
 

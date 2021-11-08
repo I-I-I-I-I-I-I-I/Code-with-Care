@@ -3,7 +3,9 @@ import StudentPage from '../StudentPage';
 
 export function Allana() {
 return(
-    <StudentPage></StudentPage>
+    <div className="App">
+    <StudentPage/>
+    </div>
     );
 }
 

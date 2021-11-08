@@ -81,12 +81,11 @@
 }
 
 .Astudent {
-    z-index: 1;
+
     background-color : "#2d2d2d" ;
 }
 
 .blockleft {
-    z-index: 0;
     position: absolute;
     width : 130px;
     height : 1000px;
@@ -94,7 +93,7 @@
 }
 
 .blockright {
-    z-index: 0;
+
     position: absolute;
     left :92%;
     width : 250px;
@@ -110,5 +109,5 @@
 .Nav {
     position: fixed;
     width : 100% ;
-    z-index: 10;
+    z-index: 1;
 }

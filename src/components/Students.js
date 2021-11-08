@@ -18,8 +18,6 @@ function Students() {
             <h1 style={{textDecoration : "underline"}}>Wanda's Class</h1>
             <Card/>
 
-            <Arnold/>
-
         </div>
     )
 }
