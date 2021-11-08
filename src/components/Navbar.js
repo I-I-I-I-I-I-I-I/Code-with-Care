@@ -2,6 +2,7 @@ import '../App.css';
 import {Nav , Navbar , Container , Button} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import logo from '../images/default.png'
+import {BsPersonCircle , HiLockClosed} from "react-icons/all";
 
 function App() {
     return (
@@ -13,7 +14,8 @@ function App() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="container-fluid">
                             <Link to="/students">
-                                <Nav.Link href="#students">Students</Nav.Link>
+                                <Button href="#students" style={{}}><BsPersonCircle style={{marginBottom : "0.2rem"}}/> Students</Button>
+
                             </Link>
 
                             {/* TEMPORARY LINKS */}
@@ -33,7 +35,7 @@ function App() {
                         </Nav>
                     </Navbar.Collapse>
                     <Link to="/adminLogin">
-                        <Button variant="danger" className="dangerButton">Admin
+                        <Button variant="danger" className="dangerButton"><HiLockClosed style={{marginBottom : "0.2rem"}}/> Admin
                             Login</Button>
                     </Link>
                 </Container>

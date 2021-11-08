@@ -1,7 +1,10 @@
 import React from 'react';
+import StudentPage from '../StudentPage';
 
-function Allana() {
-
+export function Allana() {
+return(
+    <StudentPage></StudentPage>
+    );
 }
 
 export default Allana;

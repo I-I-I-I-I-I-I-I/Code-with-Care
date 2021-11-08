@@ -1,13 +1,12 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
-import * as StudentComponents from "./StudentComponents"
 
 function RouteStudent({names}) {
     console.log("hi")
   return(
 
       <div>
-{/* <Router>
+<Router>
     <Switch>
     
     <Route path = {"/" + names} component=""/>
@@ -32,7 +31,7 @@ function RouteStudent({names}) {
         
     </Route>
 </Switch>
-</Router> */}
+</Router>
 </div>
   );
 
