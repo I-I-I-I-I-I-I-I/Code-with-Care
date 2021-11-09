@@ -2,18 +2,21 @@ import '../App.css';
 import {Nav , Navbar , Container , Button} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import logo from '../images/default.png'
+import {BsPersonCircle , HiLockClosed} from "react-icons/all";
 
 function App() {
     return (
         <div className="Nav">
-            <Navbar variant="dark" bg="dark" expand="lg" className="navbarFull">
-                <Container>
-                    <Navbar.Brand href="/students" className="logo-right"><img style = {{height : "300px"}}src = {logo}></img></Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+            <Navbar variant="dark" bg="dark" expand="lg">
+                <Container fluid>
+                    <Link to = "/students">
+                    <Navbar.Brand><img style={{height : "2.5rem"}} src = {logo}/></Navbar.Brand>
+                    </Link>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="container-fluid">
+                        <Nav className="me-auto">
                             <Link to="/students">
-                                <Nav.Link href="#students">Students</Nav.Link>
+                                <Button href="#students"><BsPersonCircle style={{marginBottom : "0.2rem"}}/> Students</Button>
                             </Link>
 
                             {/* TEMPORARY LINKS */}
@@ -29,13 +32,14 @@ function App() {
                                 <Nav.Link href="#AdminHandler">Admin handler</Nav.Link>
                             </Link>
 
-
+                        </Nav>
+                        <Nav className="me-lg-1 ms-md-auto">
+                            <Link to="/adminLogin">
+                                <Button variant="danger" className="dangerButton"><HiLockClosed style={{marginBottom : "0.2rem"}}/> Admin
+                                    Login</Button>
+                            </Link>
                         </Nav>
                     </Navbar.Collapse>
-                    <Link to="/adminLogin">
-                        <Button variant="danger" className="dangerButton">Admin
-                            Login</Button>
-                    </Link>
                 </Container>
             </Navbar>
         </div>

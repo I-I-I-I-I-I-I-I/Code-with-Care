@@ -8,9 +8,16 @@ import AdminHandler from './components/AdminHandler';
 import {Helmet} from "react-helmet"
 import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import Footer from './components/Footer';
+import Arnold from './components/StudentComponents/Arnold';
+import Allana from './components/StudentComponents/Allana';
+import Ringo from './components/StudentComponents/Ringo';
+import Daniel from './components/StudentComponents/Ringo';
+import Betty from './components/StudentComponents/Ringo';
+import Harvey from './components/StudentComponents/Ringo';
+import Patrick from './components/StudentComponents/Ringo';
 function App() {
     return (
-        <div className="App">
+        <div className="App" style = {{position : "relative" , minHeight : "100vh"}}>
             <div style = {{paddingBottom : "5rem"}}>
             <Helmet>
                 <title>Code with Care</title>
@@ -43,11 +50,34 @@ function App() {
                     <Route path="/AdminHandler" component={AdminHandler}>
                         <AdminHandler/>
                     </Route>
+                    <Route path="/Arnold">
+                        <Arnold/>
+                    </Route>
+                    <Route path="/Allana">
+                        <Allana/>
+                    </Route>
+                    <Route path="/Ringo">
+                        <Ringo/>
+                    </Route>
+                    <Route path="/Carson">
+                        <Daniel/>
+                    </Route>
+                    <Route path="/Betty">
+                        <Betty/>
+                    </Route>
+                    <Route path="/Harvey">
+                        <Harvey/>
+                    </Route>
+                    <Route path="/Patrick">
+                        <Patrick/>
+                    </Route>
+
+
                 </Switch>
             </Router>
             </div>
 
-            <Footer/>
+           <div style = {{position : "absolute" , bottom : "0" , width : "100%"}}><Footer/></div>
 
         </div>
     );

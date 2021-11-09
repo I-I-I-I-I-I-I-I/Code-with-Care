@@ -1,10 +1,11 @@
 import React from 'react';
+import StudentPage from '../StudentPage';
 
-function Arnold() {
+export function Arnold() {
 
     return(
 
-        <h1>JO</h1>
+        <StudentPage/>
 
     );
 

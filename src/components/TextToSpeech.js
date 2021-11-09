@@ -27,7 +27,7 @@ function TextToSpeech() {
     return (
         <Button className="aButton" variant="warning" size="lg" onClick={() => speakAllElements()}
                 aria-label="Click this button to speak the text.">
-            <FaVolumeUp/> Speak text!
+            <FaVolumeUp style={{marginBottom : "0.2rem"}}/> Speak text!
         </Button>
     );
 }
