@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Adminlogin from './components/Adminlogin';
 import AdminPage from './components/AdminPage';
 import StudentPage from './components/StudentPage';
-import AdminHandler from './components/AdminHandler';
 import {Helmet} from "react-helmet"
 import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import Footer from './components/Footer';
@@ -46,9 +45,6 @@ function App() {
                     </Route>
                     <Route path="/studentPage" component={StudentPage}>
                         <StudentPage/>
-                    </Route>
-                    <Route path="/AdminHandler" component={AdminHandler}>
-                        <AdminHandler/>
                     </Route>
                     <Route path="/Arnold">
                         <Arnold/>

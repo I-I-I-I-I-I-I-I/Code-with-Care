@@ -1,52 +1,52 @@
 [
   {
     "name": "Arnold Dickinson",
-    "desc": "",
+    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
     "image": "Arnold"
   },
   {
     "name": "Daniel Hickory",
-    "desc": "",
+    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
     "image": "Daniel"
   },
   {
     "name": "Patrick Wimboway",
-    "desc": "",
+    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
     "image": "Patrick"
   },
   {
     "name": "Betty Charles",
-    "desc": "",
+    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
     "image": "Betty"
   },
   {
     "name": "Carson Jackson",
-    "desc": "",
+    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
     "image": "Carson"
   },
   {
     "name": "Ringo Starr",
-    "desc": "",
+    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
     "image": "Ringo"
   },
   {
     "name": "Allana Doherty",
-    "desc": "",
+    "reqs": ["true" , "false" , "large" , "Comic Sans MS"],
     "image": "Allana"
   },
   {
     "name": "Harvey Kennedy",
-    "desc": "",
+    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
     "image": "Harvey"
   },
   {
     "name": "Jessie Cruickshank",
-    "desc": "",
+    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
     "image": "Jessie"
   },
   {
     "name": "Ringo Cadueax",
-    "desc": "",
+    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
     "image": "Ringo"
   }
 ]

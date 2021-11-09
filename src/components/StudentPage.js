@@ -5,16 +5,48 @@ import {Card, Col, Container, Image, Row} from "react-bootstrap";
 import Picture from "../images/1200px-Circuit_elements.svg.png";
 import TextToSpeech from "./TextToSpeech";
 
-function studentPage() {
+var Params = null;
+
+const TTScheck = () => {
+    if(Params[0] === "true"){
+    return <TextToSpeech/>
+    }
+}
+
+const ColourBlindCheck = () => {
+    let changing = document.getElementsByClassName("colourBlind");
+    if(Params[1] === "true")
+
+    {
+        for(var x = 0 ; x < changing.length ; x++)
+            {
+                changing[x].style['border'] = "3px #ffc107 solid";
+            }
+        
+    }
+    else{
+        for(var x = 0 ; x < changing.length ; x++)
+        {
+            changing[x].style['border'] = "3px #0d6efd solid";
+        }
+    }
+
+}
+
+function studentPage(reqs) {
+    Params = reqs.reqs.reqs;
+    console.log(Params[1]);
     return (
-        <div className="App" style={{paddingTop : "3rem"}}>
+        <div className="App" style={{paddingTop : "3rem" }} onLoad= {() => ColourBlindCheck()}>
             <Container>
                 <Row>
                     <Col xs style={{display: 'flex', justifyContent: 'flex-start'}}>
                         <BackButton/>
                     </Col>
                     <Col xs style={{display: 'flex', justifyContent: 'flex-end'}}>
-                        <TextToSpeech/>
+
+                        <TTScheck/>
+                        
                     </Col>
                 </Row>
             </Container>
@@ -23,7 +55,7 @@ function studentPage() {
                     <h1>Basic Electronics</h1>
                 </Row>
                 <Row>
-                    <ReactPlayer
+                    <ReactPlayer className = "colourBlind"
                         url="https://www.youtube.com/watch?v=uXr4lXYjXuU&ab_channel=TheOrganicChemistryTutor"
                         controls={true}
                         width='100%'
@@ -31,7 +63,7 @@ function studentPage() {
                 </Row>
                 <Row style={{margin: "1.3em"}}>
                     <Col md>
-                        <Card className="my-1" bg="primary" text="white">
+                        <Card className="colourBlind">
                             <Card.Body>
                                 <Card.Title>
                                     Lorem ipsum dolor.
@@ -46,7 +78,7 @@ function studentPage() {
                         </Card>
                     </Col>
                     <Col md>
-                        <Image className="my-1" src={Picture} fluid rounded/>
+                        <Image className="colourBlind" src={Picture} fluid rounded/>
                     </Col>
                 </Row>
             </Container>
