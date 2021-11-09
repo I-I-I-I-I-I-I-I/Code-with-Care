@@ -33,10 +33,12 @@ function App() {
                             </Link>
 
                         </Nav>
-                        <Link to="/adminLogin">
-                            <Button variant="danger" className="dangerButton"><HiLockClosed style={{marginBottom : "0.2rem"}}/> Admin
-                                Login</Button>
-                        </Link>
+                        <Nav className="me-lg-1 ms-md-auto">
+                            <Link to="/adminLogin">
+                                <Button variant="danger" className="dangerButton"><HiLockClosed style={{marginBottom : "0.2rem"}}/> Admin
+                                    Login</Button>
+                            </Link>
+                        </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
