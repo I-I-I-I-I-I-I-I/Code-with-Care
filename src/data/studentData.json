@@ -1,17 +1,17 @@
 [
   {
     "name": "Arnold Dickinson",
-    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
+    "reqs": ["true" , "false" , "large" , "Comic Sans MS"],
     "image": "Arnold"
   },
   {
     "name": "Daniel Hickory",
-    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
+    "reqs": ["false" , "true" , "large" , "Comic Sans MS"],
     "image": "Daniel"
   },
   {
     "name": "Patrick Wimboway",
-    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
+    "reqs": ["true" , "false" , "large" , "Comic Sans MS"],
     "image": "Patrick"
   },
   {
@@ -26,7 +26,7 @@
   },
   {
     "name": "Ringo Starr",
-    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
+    "reqs": ["false" , "true" , "large" , "Comic Sans MS"],
     "image": "Ringo"
   },
   {
@@ -36,12 +36,12 @@
   },
   {
     "name": "Harvey Kennedy",
-    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
+    "reqs": ["true" , "false" , "large" , "Comic Sans MS"],
     "image": "Harvey"
   },
   {
     "name": "Jessie Cruickshank",
-    "reqs": ["true" , "true" , "large" , "Comic Sans MS"],
+    "reqs": ["false" , "true" , "large" , "Comic Sans MS"],
     "image": "Jessie"
   },
   {

@@ -11,6 +11,7 @@ const TTScheck = () => {
     if(Params[0] === "true"){
     return <TextToSpeech/>
     }
+    return null;
 }
 
 
