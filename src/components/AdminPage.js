@@ -37,7 +37,7 @@ function AdminPage() {
                     </div>
                     <h6>Preview Student windows</h6>
                 <div className="studentPreviewBox" style={{ resize : "both" , overflow : "auto",position : "inherit" , border : "2px solid black" , width : "50rem" , height : "30rem" , top : "2rem"}}>
-                <select id="StudentNameReturn" onChange = {function(){x = this.value} }name="students">
+                <select id="StudentNameReturn"name="students">
                     {PostData.map(listMaker)}
                     </select>
                     <StudentPage reqs = {PostData.find(({ name }) => name === x)}/>
