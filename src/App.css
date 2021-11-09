@@ -61,9 +61,6 @@
 }
 
 .dangerButton {
-    position: absolute;
-    left: 92%;
-    bottom: 15%;
     white-space: nowrap;
     overflow: hidden;
 }
