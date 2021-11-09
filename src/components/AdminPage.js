@@ -2,7 +2,6 @@ import React , {Component , useState} from 'react';
 import "../App.css";
 import StudentContainer from './StudentContainer';
 import {ListGroup , Button , Modal , Form} from 'react-bootstrap';
-import AddStudent from './AddStudent'
 
 function AdminPage() {
 
@@ -46,7 +45,12 @@ function AdminPage() {
                             <h8>Student Name : </h8><input placeholder = "Student Name"></input>
                             <br></br>
                             <br></br>
-                            <h8>Student requirements : </h8><select name = "Student needs"></select>
+                            <h8>Student requirements : </h8>
+                            <select name = "Student needs">
+                                <option value="colourblind">Colourblind</option>
+                                <option value="TTS">Requires Text-to-Speech</option>
+                                <option value="colourblind">Colourblind</option>
+                            </select>
                             </Modal.Body>
 
                         <Modal.Footer>
