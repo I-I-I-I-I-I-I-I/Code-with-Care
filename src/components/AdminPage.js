@@ -1,84 +1,92 @@
-import React , {Component} from 'react';
+import React , {Component , useState} from 'react';
 import "../App.css";
 import StudentContainer from './StudentContainer';
 import {ListGroup , Button , Modal , Form} from 'react-bootstrap';
+import StudentPage from './StudentPage';
+import PostData from '../data/studentData.json';
+import studentPage from './StudentPage';
 
-
-export default class AdminPage extends Component {
-
-    onSubmit = () => {
-        console.log(this.state.studentName);
-        JSON.stringify(this.state);
-    };
-
-///////////////////////////////////////////////////////
-
-constructor(props) {
-    super(props);
-      this.state = {
-        selectedFile: null,
-        studentName : ""
-      }
-   
-  }
-
-     onChangeHandler = event => {
-
-        this.setState({
-            selectedFile : event.target.files[0],
-            loaded : 0,
-        })
-        }
-
-//WHEN SUBMIT BUTTON IS CLICKED
-
-    onClickHandler = () => {
-        const data = new FormData() 
-        data.append('file', this.state.selectedFile)
+    const listMaker = (listElement) => {
+        return (
+                <option value = {listElement.image}>{listElement.name}</option>
+        )
     }
-///////////////////////////////////////////////////////
-    render() {
+
+
+function AdminPage() {
+
+    const [show , setShow] = useState(false);
+
+    const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+
+    function CloseHandler() {
+
+        handleClose();
+        alert("STUDENT CHANGES SUBMITTED \n ---PROTOTYPE WARNING--- \n This feature is not fully functional yet, any students saved will not be fully incorporated into the site");
+
+    }
+    var x = "Arnold Dickinson";
     return (
         
-        <div className="App">
-            <h1>Admin Page</h1>   
+        <div className="App" style = {{overflow : "auto"}}>
+            <h1>Admin Page</h1>  
+
+            <div id="Studentselect" style={{resize : "both" , overflow : "auto" , height : "60rem" , position : 'relative' , margin : "20px" , border : "20px" , width : "50.1rem"}}>
+                <div className="studentSelect" style= {{position : "relative" , top : "3 rem" , right : "0rem" , width : "10px"}}> 
+                    </div>
+                    <h6>Preview Student windows</h6>
+                <div className="studentPreviewBox" style={{ overflow : "scroll",position : "inherit" , border : "2px solid black" , width : "50rem" , height : "30rem" , top : "2rem"}}>
+                <select id="StudentNameReturn" name="students">
+                    {PostData.map(listMaker)}
+                    </select>
+                    <StudentPage reqs = {PostData.find(({ name }) => name === "Arnold Dickinson")}/>
+                </div>
+
+           </div>
+
+                    <Modal show = {show} onHide={handleClose}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Add new student</Modal.Title>
+                        </Modal.Header>
+
+                            <Modal.Body>
+                            <h8>Student Name : </h8><input placeholder = "Student Name"></input>
+                            <br></br>
+                            <br></br>
+                            <h8>Student requirements : </h8>
+                            <select name = "Student needs">
+                                <option value="colourblind">Colourblind</option>
+                                <option value="TTS">Requires Text-to-Speech</option>
+                                <option value="large_font">Large font</option>
+                                <option value="dyslexia">Dyslexia assist</option>
+                            </select>
+                            <br></br>
+                            <br></br>
+                            <h8>Student photo (optional) : </h8>
+                            <input type="file"></input>
+                            </Modal.Body>
+
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>Close</Button>
+                            <Button variant="primary" onClick={CloseHandler}>Save changes</Button>
+                        </Modal.Footer>
+                    </Modal>
             <ListGroup className="Lists">
             <h4>Students in your class!</h4>
                 <StudentContainer>
                 </StudentContainer>
                 <ListGroup.Item>
                     <div>
-                    <Button style={{paddingBottom : '0px' , marginBottom : '0px' , borderBottom : '0px'}}>
+                    <Button onClick = {handleShow} style={{paddingBottom : '0px' , marginBottom : '0px' , borderBottom : '0px'}}>
                         <p style={{marginBottom : '7px'}}>Add new Student</p>
                     </Button>
                     </div>
                 </ListGroup.Item>
             </ListGroup>
 
-            <input type="file" name="file" onChange={this.onChangeHandler}/>
-            <button type="button" class="btn btn-success btn-block" onClick={this.onClickHandler}>Upload</button> 
-
-        {/* <Form.Group className="m-0">
-            <Form.Control
-                className = "studentName"
-                as = "textarea"
-                rows="3"
-                placeholder="student name"
-                value = {this.state.studentName}
-                onChange = {e => this.setState({ studentName : e.target.value})}
-                type="text"
-                />
-            <Button
-                className = "btnSender"
-                variant = "outline-success"
-                onClick = {this.onSubmit}
-                >
-                Add Student
-            </Button>
-        </Form.Group> */}
-
         </div>
     );
-    }
 }
+export default AdminPage;
   

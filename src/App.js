@@ -4,17 +4,17 @@ import Navbar from './components/Navbar';
 import Adminlogin from './components/Adminlogin';
 import AdminPage from './components/AdminPage';
 import StudentPage from './components/StudentPage';
-import AdminHandler from './components/AdminHandler';
 import {Helmet} from "react-helmet"
 import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import Footer from './components/Footer';
 import Arnold from './components/StudentComponents/Arnold';
 import Allana from './components/StudentComponents/Allana';
 import Ringo from './components/StudentComponents/Ringo';
-import Daniel from './components/StudentComponents/Ringo';
-import Betty from './components/StudentComponents/Ringo';
-import Harvey from './components/StudentComponents/Ringo';
-import Patrick from './components/StudentComponents/Ringo';
+import Daniel from './components/StudentComponents/Daniel';
+import Betty from './components/StudentComponents/Betty';
+import Harvey from './components/StudentComponents/Harvey';
+import Patrick from './components/StudentComponents/Patrick';
+import Jessie from './components/StudentComponents/Jessie';
 function App() {
     return (
         <div className="App" style = {{position : "relative" , minHeight : "100vh"}}>
@@ -47,9 +47,6 @@ function App() {
                     <Route path="/studentPage" component={StudentPage}>
                         <StudentPage/>
                     </Route>
-                    <Route path="/AdminHandler" component={AdminHandler}>
-                        <AdminHandler/>
-                    </Route>
                     <Route path="/Arnold">
                         <Arnold/>
                     </Route>
@@ -70,6 +67,12 @@ function App() {
                     </Route>
                     <Route path="/Patrick">
                         <Patrick/>
+                    </Route>
+                    <Route path="/Jessie">
+                        <Jessie/>
+                    </Route>
+                    <Route path="/Daniel">
+                        <Daniel/>
                     </Route>
 
 

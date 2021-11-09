@@ -1,4 +1,4 @@
-import React, {useContext , Component , createContext} from 'react';
+import React from 'react';
 import "../login.css";
 //Still working on validation for this, submit takes you to the right page for now
 
@@ -9,7 +9,7 @@ return (
     <div class="login-box">
         <h2>Login</h2>
         
-        <form>
+        <form action="/AdminPage">
             <div class="user-box">
                 <input type="text" name="email" required=""/>
                 <label>Username</label>
