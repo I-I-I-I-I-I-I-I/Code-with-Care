@@ -12,11 +12,11 @@ return (
         <form action="/AdminPage">
             <div class="user-box">
                 <input type="text" name="email" required=""/>
-                <label>Username</label>
+                <label>Username --PROTOTYPE - CAN BE ANYTHING FOR NOW</label>
             </div>
             <div class="user-box">
                 <input type="password" name="password" required=""/>
-                <label>Password</label>
+                <label>Password --PROTOTYPE - CAN BE ANYTHING FOR NOW</label>
             </div>
 
             <button type = "submit">

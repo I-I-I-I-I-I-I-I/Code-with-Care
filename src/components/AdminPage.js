@@ -32,15 +32,15 @@ function AdminPage() {
         <div className="App" style = {{overflow : "auto"}}>
             <h1>Admin Page</h1>  
 
-            <div id="Studentselect" style={{resize : "both" , overflow : "auto" , height : "60rem" , position : 'relative' , margin : "20px" , border : "20px" , width : "50.1rem"}}>
-                <div className="studentSelect" style= {{position : "relative" , top : "3 rem" , right : "0rem" , width : "10px"}}> 
+            <div id="Studentselect" style={{ height : "60rem" , position : 'relative' , margin : "20px" , border : "20px" , width : "50.1rem"}}>
+                <div className="studentSelect" style= {{ position : "relative" , top : "3 rem" , right : "0rem" , width : "10px"}}> 
                     </div>
                     <h6>Preview Student windows</h6>
-                <div className="studentPreviewBox" style={{ overflow : "scroll",position : "inherit" , border : "2px solid black" , width : "50rem" , height : "30rem" , top : "2rem"}}>
-                <select id="StudentNameReturn" name="students">
+                <div className="studentPreviewBox" style={{ resize : "both" , overflow : "auto",position : "inherit" , border : "2px solid black" , width : "50rem" , height : "30rem" , top : "2rem"}}>
+                <select id="StudentNameReturn" onChange = {function(){x = this.value} }name="students">
                     {PostData.map(listMaker)}
                     </select>
-                    <StudentPage reqs = {PostData.find(({ name }) => name === "Arnold Dickinson")}/>
+                    <StudentPage reqs = {PostData.find(({ name }) => name === x)}/>
                 </div>
 
            </div>
@@ -84,6 +84,10 @@ function AdminPage() {
                     </div>
                 </ListGroup.Item>
             </ListGroup>
+
+        <div style={{border : "1px black dashed" , width : "45rem" , height : "14rem" , position : "relative" , left : "1rem" , bottom : "24rem"}}>
+            <h1>Coming Soon! -Lesson Designer</h1>
+        </div>
 
         </div>
     );
