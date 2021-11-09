@@ -9,9 +9,9 @@ function Footer() {
                 <NavbarBrand className="m-auto">Made with ❤ by 2814919 and 2711337</NavbarBrand>
             </Container>
             <div>
-                <SocialIcon url ="https://twitter.com/"/>
-                <SocialIcon url ="https://facebook.com/"/>
-                <SocialIcon url ="https://pinterest.com/"/>
+                <SocialIcon fgColor="white" url ="https://twitter.com/"/>
+                <SocialIcon fgColor="white" url ="https://facebook.com/"/>
+                <SocialIcon fgColor="white" url ="https://pinterest.com/"/>
                 </div>
         </Navbar>
     );
