@@ -18,20 +18,6 @@ function App() {
                             <Link to="/students">
                                 <Button href="#students"><BsPersonCircle style={{marginBottom : "0.2rem"}}/> Students</Button>
                             </Link>
-
-                            {/* TEMPORARY LINKS */}
-                            <Link to="/AdminPage">
-                                <Nav.Link href="#AdminPage">MAIN ADMIN DEV
-                                    ACCESS</Nav.Link>
-                            </Link>
-                            <Link to="/studentPage">
-                                <Nav.Link href="#studentPage">MAIN STUDENT DEV
-                                    ACCESS</Nav.Link>
-                            </Link>
-                            <Link to="/AdminHandler">
-                                <Nav.Link href="#AdminHandler">Admin handler</Nav.Link>
-                            </Link>
-
                         </Nav>
                         <Nav className="me-lg-1 ms-md-auto">
                             <Link to="/adminLogin">
